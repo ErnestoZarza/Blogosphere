@@ -1,0 +1,33 @@
+<div class="comment-section pb-5 pl-3 pr-3 pl-md-4 pr-md-4">
+    <h5 class="pb-4 pt-4 comment-title">{{ post.comments.published.count }} Comentarios</h5>
+
+
+
+
+    {% for comment in post.comments.published %}
+
+        <div class="d-flex flex-column comment-element pt-3 pb-4">
+            <div class="d-flex no-gutters comment-element-spec pb-3">
+                <div class="d-flex justify-content-center align-items-center col-1">
+                    <span class="ion-android-person"></span>
+                </div>
+                <div class="d-flex flex-column col pl-3">
+
+                    <h5><a class="comment-element-autor pt-1" href="">
+                        {{ comment.name }} {% if not forloop.last %} {% endif %}
+                    </a>
+                    </h5>
+
+                    <p class="comment-element-fecha pt-1">{{ comment.submit_day }}</p>
+                </div>
+
+            </div>
+            <div class="comment-element-text">
+                <p>{{ comment.content }}</p>
+            </div>
+        </div>
+
+    {% endfor %}
+
+
+</div>

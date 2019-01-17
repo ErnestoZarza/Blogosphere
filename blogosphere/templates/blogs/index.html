@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load blogs %}
+
+
+
+{% block title %}
+    Inicio
+{% endblock %}
+
+{% block content %}
+
+
+
+
+
+
+            {% main_post_area %}
+
+            {% featured_blog_area blog='El blog' count=4 %}
+
+            {% latest_post count=6 %}
+
+
+
+{% endblock %}

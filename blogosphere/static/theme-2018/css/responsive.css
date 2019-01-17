@@ -1,0 +1,276 @@
+@media (min-width: 0) {
+    .header-text {
+        height: 110px;
+        font-size: 8px;
+    }
+
+    .modal-content {
+        padding: 5% 2%;
+    }
+
+    #scrollingDiv {
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+        border-bottom-left-radius: 0;
+        opacity: 1;
+        position: fixed;
+        top: auto;
+        right: auto;
+        left: 0;
+        bottom: -2px;
+        width: 100%;
+    }
+
+    .swiper-container {
+        max-width: 320px;
+    }
+
+    .img-swiper {
+        height: 172px !important;
+        width: 100%;
+    }
+
+    .swiper-paragraph {
+        height: 84px;
+    }
+
+    .text-slide {
+        height: 194px;
+    }
+
+    .things {
+        display: none !important;
+    }
+
+    .imagenes{
+        display: none !important;
+    }
+
+    #navbarSupportedContent {
+        padding-top: 10px;
+    }
+
+    nav > button.btn.btn-link {
+        top: 7px;
+    }
+
+    footer {
+        margin-bottom: 48px;
+    }
+
+    .list-element > div > a > img {
+        border-top-left-radius: .25rem;
+        border-top-right-radius: .25rem;
+        border-bottom-left-radius: 0;
+    }
+
+    .list-element-autor {
+        width: 100%;
+    }
+
+    .divider {
+        display: none;
+    }
+
+    .comment-btn-text {
+        display: none;
+    }
+}
+
+@media (min-width: 576px) {
+    .header-text {
+        height: 130px;
+        font-size: 10px;
+    }
+
+    .modal-dialog {
+        max-width: 550px;
+        margin: 1.75rem auto;
+    }
+
+    button.btn.btn-outline-secondary {
+        padding: 10px 20px;
+        font-size: 20px;
+    }
+
+    .list-element-text {
+        height: 127.2px;
+    }
+
+    .list-element-text > p {
+        display: none;
+    }
+
+    .modal-content {
+        padding: 5% 2%;
+    }
+
+    .swiper-container {
+        max-width: unset;
+    }
+
+    .img-swiper {
+        height: 130px !important;
+        width: 100%;
+    }
+
+    .swiper-paragraph {
+        height: 105px;
+    }
+
+    .things {
+        display: inline !important;
+    }
+
+    .imagenes{
+        display: flex !important;
+    }
+
+    .list-element > div > a > img {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: .25rem;
+    }
+
+    .list-element-autor {
+        width: auto;
+    }
+
+    .divider {
+        display: inline;
+    }
+
+    .right-side {
+        max-height: 1000px;
+    }
+}
+
+@media (min-width: 768px) {
+    .modal-content {
+        padding: 5% 7%;
+    }
+
+    .list-element-text {
+        height: 199.2px;
+    }
+
+    .list-element-text > p {
+        display: block;
+    }
+
+    .big-ad-text > h4 {
+        overflow: hidden;
+        max-height: 72px;
+    }
+
+    .big-ad-text > p {
+        max-height: 144px;
+        overflow: hidden;
+    }
+
+    .img-swiper {
+        height: 130px !important;
+        width: 100%;
+    }
+
+    .right-side {
+        max-height: 1200px;
+    }
+
+    .comment-btn-text {
+        display: none;
+    }
+
+    .comment-btn-text {
+        display: inline;
+    }
+}
+
+@media (min-width: 992px) {
+    .header-text {
+        height: 170px;
+        font-size: 14px;
+    }
+
+    #scrollingDiv {
+        border-top-left-radius: 7px;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 7px;
+        opacity: 0.5;
+        position: absolute;
+        top: 200px;
+        right: 0;
+        left: auto;
+        bottom: auto;
+        width: auto;
+    }
+
+    .ads {
+        height: 240px;
+    }
+
+    .big-ad-text {
+        max-height: 240px;
+    }
+
+    .small-ads > div > div > h4 {
+        overflow: hidden;
+        max-height: 72px;
+    }
+
+    .right-info-text > p {
+        height: 70px;
+        overflow: hidden;
+    }
+
+    .img-swiper {
+        height: 171.5px !important;
+        width: 100%;
+    }
+
+    .swiper-paragraph {
+        height: 84px;
+    }
+
+    .text-slide {
+        height: 172px;
+    }
+
+    #navbarSupportedContent {
+        padding-top: 0;
+    }
+
+    nav > button.btn.btn-link {
+        top: 10px;
+    }
+
+    .right-side {
+        max-height: unset;
+    }
+
+    footer {
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .ads {
+        height: 256px;
+    }
+
+    .big-ad-text {
+        max-height: 256px;
+    }
+
+    .img-swiper {
+        height: 150px !important;
+        width: 100%;
+    }
+
+    .swiper-paragraph {
+        height: 105px;
+    }
+
+    .text-slide {
+        height: 194px;
+    }
+}

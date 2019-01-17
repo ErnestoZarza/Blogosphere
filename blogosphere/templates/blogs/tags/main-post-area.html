@@ -1,0 +1,28 @@
+<section class="d-flex flex-column flex-lg-row no-gutters ads pl-1 pl-sm-0 pr-1 pr-sm-0">
+    <div class="d-flex flex-column flex-md-row col-lg-8 no-gutters mr-lg-2 mb-2 mb-lg-0 ">
+        <div class="col-md-7 order-md-1">
+            <img class="img-fluid" src="{{ post_main.image.crop.555x320 }}" alt="{{ post_main.title | slugify }}" title="{{ post_main.title }}">
+        </div>
+        <div class="col-md-5 order-md-0 p-3 p-sm-2 big-ad-text align-self-sm-center">
+            <h4><a href="{{ post_main.get_absolute_url }}">{{ post_main.title|truncatewords:'10' }}</a>
+            </h4>
+            <p>{{ post_main.lead|safe|truncatewords_html:'40' }}</p>
+        </div>
+    </div>
+    <div class="d-flex flex-column flex-sm-row flex-lg-column col-lg-4 no-gutters small-ads">
+        {% for post in post_secondaries %}
+            <div class="d-flex flex-column flex-lg-row no-gutters col-sm
+            {% if not forloop.last %}
+            mb-2 mb-lg-2 mb-sm-0
+            {% endif %}
+              mr-lg-0 mr-sm-2 ">
+                <div class="col-lg-4">
+                    <img class="img-fluid" src="{{ post.image.crop.127x80 }}" alt="{{ post.title|slugify }}" title="{{ post.title }}">
+                </div>
+                <div class="d-flex col-lg p-3 pb-sm-0 pr-sm-0 pl-sm-1 pt-sm-1 pl-lg-2 pt-lg-0">
+                    <h4 class="align-self-lg-center"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h4>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>

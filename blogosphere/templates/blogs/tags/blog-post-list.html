@@ -1,0 +1,30 @@
+<div class="d-flex flex-column p-3 pt-4 list-content">
+
+    {% for post in posts %}
+        <div class="d-flex flex-column flex-sm-row no-gutters mb-3 list-element">
+            <div class="col-sm-5 col-xl-4">
+                <a class="img-fluid" href="{{ post.get_absolute_url }}"><img class="img-fluid"
+                                                                             src="{{ post.image.crop.555x320 }}"
+                                                                             alt="{{ post.title|slugify }} "
+                                                                             title="{{ post.title }}"></a>
+            </div>
+            <div class="d-flex flex-column list-element-text ml-3 mr-3 mt-2 mb-2">
+                <h5><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h5>
+                <h6><a class="list-element-autor" href="">{% for author in post.authors.all %}
+                    {{ author }} {% if not forloop.last %}, {% endif %}
+                {% endfor %}</a><span
+                        class="divider">  |  </span> <span class="list-element-date">25-02-2018</span>
+                </h6>
+                <p>{{ post.lead|safe|truncatewords:20 }}</p>
+                <a href="#" class="btn ml-auto">Leer más</a>
+            </div>
+        </div>
+
+    {% endfor %}
+
+
+
+
+
+</div>
+

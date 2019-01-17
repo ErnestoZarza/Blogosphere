@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+{% load blogs %}
+
+
+{% load blogs staticfiles %}
+
+
+
+{% block title %}
+    {{ blog.title }}
+{% endblock %}
+
+{% block content %}
+
+    <div class="d-flex flex-column flex-lg-row pb-5 border-b no-gutters">
+
+        <div class="col-lg-9 left-side mb-3">
+            <div class="blog-banner mb-5 mb-sm-4">
+                <img class="img-fluid" src={{ blog.banner_image.crop.1470x234 }} alt="">
+            </div>
+            <div class="d-flex flex-column flex-sm-row no-gutters blog-autor mb-2">
+                <div class="d-flex col-sm-4 col-md-3 justify-content-center align-items-center">
+                    <a href=""><img class="rounded-circle" src="{{ blog.authors.first.image.crop.145x145 }}" alt=""></a>
+                </div>
+                <div class="d-flex flex-column list-element-text ml-3 mr-3 mt-2 mb-2">
+                    <h5><a href="">{{ blog.title }}</a></h5>
+                    <h6><a class="list-element-autor" href="">{{ blog.authors.first.name }}</a></h6>
+                    <p>{{ blog.description }}</p>
+                </div>
+            </div>
+
+            {% blog_post_list posts %}
+
+            {% include 'blogs/includes/_paginator.html'  with model=page_obj %}
+
+
+        </div>
+
+        <div class="col-lg-3 pl-lg-3">
+            <div class="d-flex flex-column flex-sm-wrap-reverse flex-lg-nowrap right-side">
+                <div class="h-ad col-12 col-sm-6 col-lg-12 pr-2 pl-2 pr-sm-0 pl-lg-0">
+                    <a href="#">
+                        <img src="{% static 'theme-2018/img/prioridades.jpg' %}" alt="">
+                    </a>
+                </div>
+                <div class="h-ad col-12 col-sm-6 col-lg-12 pr-2 pl-2 pr-sm-0 pl-lg-0">
+                    <a href="#">
+                        <img src="img/prioridades.jpg" alt="">
+                    </a>
+                </div>
+                <div class="right-info order-sm-last order-lg-0 col-12 col-sm-6 col-lg-12">
+                    <div class="mb-4">
+                        <h6 class="text-center">Actualidad</h6>
+                    </div>
+                    <div>
+                        <div class="d-flex no-gutters mb-3">
+                            <div class="col-5">
+                                <a class="img-fluid" href=""><img class="img-fluid" src="img/big-card.jpg"
+                                                                  alt=""></a>
+                            </div>
+                            <div class="d-flex col-lg align-items-center pl-3 pl-sm-2 right-info-text">
+                                <p class="align-self-lg-center"><a href="">Lorem ipsum dolor sit amet,
+                                    consectetur adipisicing elit.</a></p>
+                            </div>
+                        </div>
+                        <div class="d-flex no-gutters mb-3">
+                            <div class="col-5">
+                                <a class="img-fluid" href=""><img class="img-fluid" src="img/big-card.jpg"
+                                                                  alt=""></a>
+                            </div>
+                            <div class="d-flex col-lg align-items-center pl-3 pl-sm-2 right-info-text">
+                                <p class="align-self-lg-center"><a href="">Lorem ipsum dolor sit amet,
+                                    consectetur adipisicing elit.</a></p>
+                            </div>
+                        </div>
+                        <div class="d-flex no-gutters mb-3">
+                            <div class="col-5">
+                                <a class="img-fluid" href=""><img class="img-fluid" src="img/big-card.jpg"
+                                                                  alt=""></a>
+                            </div>
+                            <div class="d-flex col-lg align-items-center pl-3 pl-sm-2 right-info-text">
+                                <p class="align-self-lg-center"><a href="">Lorem ipsum dolor sit amet,
+                                    consectetur adipisicing elit.</a></p>
+                            </div>
+                        </div>
+                        <div class="d-flex no-gutters mb-3">
+                            <div class="col-5">
+                                <a class="img-fluid" href=""><img class="img-fluid" src="img/big-card.jpg"
+                                                                  alt=""></a>
+                            </div>
+                            <div class="d-flex col-lg align-items-center pl-3 pl-sm-2 right-info-text">
+                                <p class="align-self-lg-center"><a href="">Lorem ipsum dolor sit amet,
+                                    consectetur adipisicing elit.</a></p>
+                            </div>
+                        </div>
+                        <div class="d-flex no-gutters">
+                            <div class="col-5">
+                                <a class="img-fluid" href=""><img class="img-fluid" src="img/big-card.jpg"
+                                                                  alt=""></a>
+                            </div>
+                            <div class="d-flex col-lg align-items-center pl-3 pl-sm-2 right-info-text">
+                                <p class="align-self-lg-center"><a href="">Lorem ipsum dolor sit amet,
+                                    consectetur adipisicing elit.</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="v-ad col-12 col-sm-6 col-lg-12 pr-2 pl-2 pr-sm-0 pl-lg-0">
+                    <a href="#">
+                        <img src="img/announce-v-3.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,122 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>
+        {% block fulltitle %}
+            Blogosfera -
+            {% block title %}
+            {% endblock %}
+        {% endblock %}
+    </title>
+
+    {% block styles %}
+
+        <!--External fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Coustard:900" rel="stylesheet">
+
+
+        <!-- 3rd party assets-->
+        <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/swiper/css/swiper.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/font-awesome/css/font-awesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/ionicons/css/ionicons.min.css' %}">
+
+        {#        <link rel="stylesheet" href="{% static 'assets/wowjs/css/libs/animate.min.css' %}">#}
+        {#        <script type="text/javascript" src="{% static 'assets/wowjs/js/wow.min.js' %}"></script>#}
+
+        <!-- Custom Styles -->
+        <link rel="stylesheet" href="{% static 'theme-2018/css/main.css' %}">
+        <link rel="stylesheet" href="{% static 'theme-2018/css/responsive.css' %}">
+
+    {% endblock %}
+
+    {% block extraStyles %}
+
+    {% endblock %}
+
+</head>
+<body>
+
+<div class="site-wrapper">
+    {% include 'blogs/includes/_header.html' %}
+
+    {% include 'blogs/includes/_navbar.html' %}
+
+    <div id="container-site" class="container p-0 mt-5">
+        <content>
+
+            {% block content %}
+
+            {% endblock %}
+        </content>
+
+        {% include 'blogs/includes/_footer.html' %}
+    </div>
+</div>
+
+
+{% block js %}
+
+    <!-- External Assets -->
+    <script type="text/javascript" src="{% static 'assets/jquery/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/popper.js/popper.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/swiper/js/swiper.min.js' %}"></script>
+
+    <script src="{% static 'theme-2018/js/main.js' %}"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('#featured-blog-area', {
+            slidesPerView: 5,
+            centeredSlides: true,
+            spaceBetween: 5,
+            grabCursor: true,
+            loop: true,
+            autoplay: {
+                delay: 10000,
+                disableOnInteraction: false
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            },
+            breakpoints: {
+                1199: {
+                    slidesPerView: 3,
+                    spaceBetween: 3
+                },
+                992: {
+                    slidesPerView: 3,
+                    spaceBetween: 1
+                },
+                767: {
+                    centeredSlides: false,
+                    slidesPerView: 2,
+                    spaceBetween: 5
+                },
+                575: {
+                    centeredSlides: true,
+                    slidesPerView: 1,
+                    spaceBetween: 5
+                }
+            }
+        });
+    </script>
+
+{% endblock %}
+
+{% block extraJs %}
+
+{% endblock %}
+
+</body>
+</html>

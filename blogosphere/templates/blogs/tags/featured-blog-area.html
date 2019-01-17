@@ -1,0 +1,32 @@
+<section>
+    <div class="headline-section">
+        <div>
+            <h3>{{ blog }}</h3>
+        </div>
+    </div>
+    <div class="content-section destacados">
+        <div class="swiper-container " id="featured-blog-area">
+            <div class="swiper-wrapper">
+                {% for post in posts %}
+                    <div class="swiper-slide">
+                        <div class="content-slide">
+                            <img class="img-fluid img-swiper" src="{{ post.image.crop.300x175 }}" alt="{{ post.title|slugify }}" title="{{ post.title }}">
+                            <div class="text-slide">
+                                <h5>{{ post.title|truncatewords:'8' }}</h5>
+                                <h5 class="autor-slide pt-1"> Perez Perez</h5>
+                                <p class="fecha">{{ post.publication_date|date:"d F Y" }}</p>
+                                <p class="swiper-paragraph">{{ post.lead|safe }}</p>
+                            </div>
+                            <a href="{{ post.get_absolute_url }}" class="btn">Leer más</a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+</section>
