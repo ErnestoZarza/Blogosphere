@@ -63,6 +63,7 @@
     <session id="-1825890605">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
@@ -292,8 +293,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="58" />
-    <option name="y" value="23" />
+    <option name="x" value="57" />
+    <option name="y" value="201" />
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
@@ -478,7 +479,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="58" y="23" width="1382" height="744" extended-state="0" />
+    <frame x="57" y="201" width="1382" height="744" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21969141" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -493,7 +495,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32891566" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5030257" side_tool="true" weight="0.380789" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.41564417" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.41564417" />
       <window_info anchor="bottom" id="Python Console" order="11" weight="0.32650602" />
       <window_info anchor="bottom" id="File Transfer" order="12" weight="0.3361921" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
